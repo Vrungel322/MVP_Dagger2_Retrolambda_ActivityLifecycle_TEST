@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 //plugin for dagger
 apply plugin: 'com.neenbedankt.android-apt'
+//plugin for lambdas
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion 25
@@ -19,6 +21,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    //set java version for retrolambda
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -36,4 +44,8 @@ dependencies {
 
     //annotation for generated class by dagger
     provided 'javax.annotation:jsr250-api:1.0'
+
+    //picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
 }
