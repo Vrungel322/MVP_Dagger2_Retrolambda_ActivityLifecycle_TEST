@@ -11,6 +11,7 @@ import com.nanddgroup.dagger_presenter_test.R;
 
 import javax.inject.Inject;
 
+//Main Branch
 public class MainActivity extends AppCompatActivity implements IMainActivityView {
     @Inject
     MainActivityPresenter mainActivityPresenter;
