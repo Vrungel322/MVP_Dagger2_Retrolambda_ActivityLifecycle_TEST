@@ -31,6 +31,9 @@ public class FullActivityLifecycle extends AppCompatActivity {
 //        Picasso.setSingletonInstance(built);
         Picasso.with(this).load("https://www.drupal.org/files/images/nodereference_url.png")
                 .into(ivLifecycle);
+        ivLifecycle.setOnClickListener(view -> {
+
+        });
     }
 
     @Override
